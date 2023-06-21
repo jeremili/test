@@ -1,0 +1,18 @@
+---
+name: Deployment
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+        packages: write
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build and Publish
+        uses: elgohr/Publish-Docker-Github-Action@v5
+        with:
+          name: jeremili/test/test
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+          registry: ghcr.io
+          tags: "1.2"
