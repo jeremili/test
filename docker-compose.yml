@@ -1,0 +1,46 @@
+version: "3.9"
+services:
+  web:
+    # image: php8.2-apache
+    build: .
+    ports:
+      - "9000:80"
+    volumes:
+      - ./app:/var/www/html
+#     depends_on:
+#       - database
+#     links:
+#       - database:database
+#   database:
+#     image: mysql:5.7
+#     restart: unless-stopped
+#     user: root:root
+#     ports:
+#       - "127.0.0.1:3308:3306"
+#     volumes:
+#       - database_data:/var/lib/mysql 
+#     environment:
+#         MYSQL_ROOT_PASSWORD: root
+#         MYSQL_DATABASE: altair
+#     networks:
+#         - database_network
+#   phpmyadmin:
+#     image: phpmyadmin/phpmyadmin
+#     environment:
+#       PMA_HOST: db
+#       PMA_PORT: 3306
+#       # PMA_ARBITRARY: 1
+#     restart: unless-stopped
+#     ports:
+#       - 8082:80
+#   mailhog:
+#     image: mailhog/mailhog
+#     logging:
+#       driver: 'none'  # disable saving logs
+#     ports:
+#       - 1025:1025 # smtp server
+#       - 8025:8025 # web ui
+# networks:
+#   database_network:
+# volumes:
+#   database_data:
