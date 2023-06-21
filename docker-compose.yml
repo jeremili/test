@@ -1,7 +1,7 @@
 version: "3.9"
 services:
   web:
-    # image: php8.2-apache
+    # image: php:8.2-apache
     build: .
     ports:
       - "9000:80"
