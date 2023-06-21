@@ -16,3 +16,4 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
           registry: ghcr.io
           tags: "1.2"
+          default_branch: main
