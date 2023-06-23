@@ -28,5 +28,5 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.PASSWORD }}
           script: |
-            cd /var/tmp/app
+            cd /var/tmp/app/test-doker
             make deploy
