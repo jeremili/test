@@ -3,7 +3,7 @@
 	<title></title>
 </head>
 <body>
-<table align="center" border="0" cellpadding="10" cellspacing="10" style="background:rgb(68,179,133);width:100%;">
+<table align="center" border="0" cellpadding="10" cellspacing="10" style="background:rgb(255,0,0);width:100%;">
 	<tbody>
 		<tr>
 			<td>
